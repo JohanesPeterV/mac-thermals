@@ -93,7 +93,7 @@ struct TemperaturePanel: View {
                                         Text(summary.maximum.map(model.settings.unit.formatted) ?? "Unavailable")
                                             .font(.title2.weight(.semibold))
                                             .monospacedDigit()
-                                        Text("\(model.isLive ? "Highest" : "Last highest") · \(summary.availableCount)/\(summary.sensors.count) sensors")
+                                        Text("\(model.isLive ? "Highest" : "Last highest") · \(summary.availableCount)/\(summary.sensors.count) \(summary.sensors.count == 1 ? "sensor" : "sensors")")
                                             .font(.caption)
                                             .foregroundStyle(.secondary)
                                     }
@@ -171,7 +171,9 @@ struct TemperaturePanel: View {
                         .help("Remove the temperature from the menu bar")
                 }
                 Spacer()
-                Text("\(visibleSensors.count) sensors").font(.caption).foregroundStyle(.secondary)
+                Text("\(visibleSensors.count) \(visibleSensors.count == 1 ? "sensor" : "sensors")")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
             Text("Unidentified sensors are kept here until their component mapping is known.")
                 .font(.caption)
