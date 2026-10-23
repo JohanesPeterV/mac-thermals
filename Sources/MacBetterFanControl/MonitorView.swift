@@ -4,9 +4,11 @@ struct MonitorView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             HStack(spacing: 16) {
-                Image(systemName: "fan")
-                    .font(.system(size: 38))
-                    .foregroundStyle(.teal)
+                Image(nsImage: AppLogo.image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 64, height: 64)
+                    .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Mac Better Fan Control")

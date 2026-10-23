@@ -6,6 +6,8 @@ A native macOS fan and temperature utility, starting with a small SwiftUI app.
 
 The starter includes a resizable dashboard, a menu bar entry, and local build and launch commands. Sensor readings, fan writes, and saved presets are not implemented. Empty states explicitly show that hardware access is pending; the app does not display simulated readings or change fan settings.
 
+The logo in `Resources/Logo.png` appears in the dashboard and menu bar and is also used as the T3 Code project icon. `Resources/AppIcon.icns` contains its macOS app icon sizes for Finder and the Dock.
+
 ## Requirements
 
 - macOS 14 or later

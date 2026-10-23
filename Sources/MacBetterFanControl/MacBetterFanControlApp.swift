@@ -13,8 +13,11 @@ struct MacBetterFanControlApp: App {
         .defaultSize(width: 900, height: 520)
         .windowResizability(.contentMinSize)
 
-        MenuBarExtra("Mac Better Fan Control", systemImage: "fan") {
+        MenuBarExtra {
             FanMenu()
+        } label: {
+            Image(nsImage: AppLogo.image)
+                .accessibilityLabel("Mac Better Fan Control")
         }
     }
 }

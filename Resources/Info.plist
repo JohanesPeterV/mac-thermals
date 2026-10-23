@@ -10,6 +10,8 @@
     <string>MacBetterFanControl</string>
     <key>CFBundleIdentifier</key>
     <string>local.mac-better-fan-control</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
     <key>CFBundleName</key>
     <string>Mac Better Fan Control</string>
     <key>CFBundlePackageType</key>
