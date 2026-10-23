@@ -8,6 +8,8 @@ let package = Package(
         .executable(name: "MacBetterFanControl", targets: ["MacBetterFanControl"])
     ],
     targets: [
-        .executableTarget(name: "MacBetterFanControl")
+        .target(name: "SMCTransport", linkerSettings: [.linkedFramework("IOKit")]),
+        .executableTarget(name: "MacBetterFanControl", dependencies: ["SMCTransport"]),
+        .testTarget(name: "MacBetterFanControlTests", dependencies: ["MacBetterFanControl"])
     ]
 )
